@@ -11,8 +11,13 @@
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="FYFan,"> 
     <meta name="description" content="今天在刷NK的时候，发现了一个基础阶乘的题目
-[题目链接]: https://ac.nowcoder.com/acm/problem/24550	“题目链接”
-觉得有点意思，之前要不就是单独求阶乘，,"> 
+觉得有点意思，之前要不就是单独求阶乘，还有更简单的就是几个数相加。。。
+
+⬆这道题目两者是结合起来了。
+以下是实例：⬇
+
+以上是题目实例
+应该为两个循环,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="FYF" type="application/atom+xml"> 
     <link rel="icon" href="https://s2.loli.net/2022/11/10/lfriuq2xY4H8aWC.png"> 
@@ -24,8 +29,13 @@
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:title" content="C++求n 个数的阶乘加起来问题的一种方法 - FYF"/>
     <meta name="twitter:description" content="今天在刷NK的时候，发现了一个基础阶乘的题目
-[题目链接]: https://ac.nowcoder.com/acm/problem/24550	“题目链接”
-觉得有点意思，之前要不就是单独求阶乘，,"/>
+觉得有点意思，之前要不就是单独求阶乘，还有更简单的就是几个数相加。。。
+
+⬆这道题目两者是结合起来了。
+以下是实例：⬇
+
+以上是题目实例
+应该为两个循环,"/>
     
     
     
@@ -34,8 +44,13 @@
     <meta property="og:type" content="object"/>
     <meta property="og:title" content="C++求n 个数的阶乘加起来问题的一种方法 - FYF"/>
     <meta property="og:description" content="今天在刷NK的时候，发现了一个基础阶乘的题目
-[题目链接]: https://ac.nowcoder.com/acm/problem/24550	“题目链接”
-觉得有点意思，之前要不就是单独求阶乘，,"/>
+觉得有点意思，之前要不就是单独求阶乘，还有更简单的就是几个数相加。。。
+
+⬆这道题目两者是结合起来了。
+以下是实例：⬇
+
+以上是题目实例
+应该为两个循环,"/>
     
 <link rel="stylesheet" href="/css/diaspora.css">
 
@@ -78,31 +93,27 @@
         </div>
         <div class="content markdown">
             <p>今天在刷NK的时候，发现了一个<strong>基础阶乘</strong>的题目</p>
-<p>[题目链接]: <a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/24550">https://ac.nowcoder.com/acm/problem/24550</a>	“题目链接”</p>
 <p>觉得有点意思，之前要不就是单独求阶乘，还有更简单的就是几个数相加。。。</p>
 <img src="https://s2.loli.net/2022/11/15/vn3TZ5SE4rPuOBX.png">
-
 <p>⬆这道题目两者是结合起来了。</p>
 <p><strong>以下是实例</strong>：⬇</p>
 <img src="https://s2.loli.net/2022/11/15/EamIs7qFDQhbZ5u.png">
-
-<p><strong>以上是题目实例</strong> </p>
+<p><strong>以上是题目实例</strong></p>
 <p><strong>应该为两个循环，一个循环为输入循环，另一个为阶乘循环，在阶乘循环的同时进行累加。</strong></p>
 <p>这是第一个在我脑子里冒出来的想法</p>
 <p>（想到就去做。。。😆）</p>
 <p><strong>以下为代码，并已在代码中附上了说明。</strong>（自认为比较通俗，目前水平😊）⬇</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span><span class="comment">//万能头文件 </span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n=<span class="number">0</span>,a=<span class="number">0</span>,k=<span class="number">1</span>;<span class="comment">//习惯性初始化 ，因为在下面代码中K需要乘，所以初始化1 </span></span><br><span class="line">	<span class="type">long</span> <span class="type">long</span> sum=<span class="number">0</span>;<span class="comment">//同上    long long 是为了在不超时的情况下，保险起见 </span></span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;<span class="comment">//这个循环为了n循环，输入n个数 </span></span><br><span class="line">		cin&gt;&gt;a;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=a;j++)&#123; <span class="comment">//这个循环为了从1到a阶乘 </span></span><br><span class="line">			k=k*j;<span class="comment">//K的作用是 不影响a的情况下进行阶乘并储存阶乘数值 </span></span><br><span class="line">		&#125;</span><br><span class="line">		sum+=k;<span class="comment">//sum=sum+k，每一次循环，sum都会有新的赋值 </span></span><br><span class="line">		k=<span class="number">1</span>;<span class="comment">//每次循环一定要记住重新初始化k </span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
                 <source type="audio/mpeg" src="">
             </audio>
             
                 <ul id="audio-list" style="display:none">
                     
                         
-                            <li title="0" data-url="https://link.hhtjim.com/qq/000IoV6w1YF2En.mp3"></li>
+                            <li title="0" data-url="https://link.hhtjim.com/163/1942366869.mp3"></li>
                         
                     
                         
